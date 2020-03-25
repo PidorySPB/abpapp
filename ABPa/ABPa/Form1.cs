@@ -86,15 +86,16 @@ namespace ABPa
                                 MessageBox.Show(xlRange.Cells[i, j].Value2.ToString());
                         }*/
                     }
-                if (textbox == 2)
+                if (textbox == 2) 
                     for (int i = 2; i <= rowCount; i++)
                     {
                         try
                         {
                             int num;
-                            if (Int32.TryParse(xlRange.Cells[i, 4].Value2.ToString(), out num))
+                             if (Int32.TryParse(xlRange.Cells[i, 4].Value2.ToString(), out num))
                             {
                                 query = String.Format("INSERT INTO technologicalMap(dron, detail, count) VALUES('{0}','{1}','{2}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString(), xlRange.Cells[i, 4].Value2.ToString());
+ 
                                 var cmd = new MySqlCommand(query, dbCon.Connection);
                                 cmd.ExecuteNonQuery();
                             }
