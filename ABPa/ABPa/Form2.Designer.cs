@@ -44,16 +44,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(30, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 13);
+            this.label1.Size = new System.Drawing.Size(370, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Поступление комплектующих №00000 от 01.01.2020";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // nameTBox
             // 
-            this.nameTBox.Location = new System.Drawing.Point(175, 58);
+            this.nameTBox.Location = new System.Drawing.Point(196, 59);
             this.nameTBox.Name = "nameTBox";
             this.nameTBox.Size = new System.Drawing.Size(201, 20);
             this.nameTBox.TabIndex = 1;
@@ -61,9 +62,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 61);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(30, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 13);
+            this.label2.Size = new System.Drawing.Size(160, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ответственный за прием:";
             // 
@@ -87,7 +89,7 @@
             // 
             // closeB
             // 
-            this.closeB.Location = new System.Drawing.Point(196, 284);
+            this.closeB.Location = new System.Drawing.Point(322, 284);
             this.closeB.Name = "closeB";
             this.closeB.Size = new System.Drawing.Size(75, 23);
             this.closeB.TabIndex = 5;
@@ -103,7 +105,7 @@
             this.count});
             this.dataGridView1.Location = new System.Drawing.Point(33, 95);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(343, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(364, 183);
             this.dataGridView1.TabIndex = 6;
             // 
             // complect
