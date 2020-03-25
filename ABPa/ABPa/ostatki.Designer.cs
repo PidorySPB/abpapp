@@ -34,9 +34,9 @@
             this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.komplekt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exec = new System.Windows.Forms.Button();
-            this.close = new System.Windows.Forms.Button();
-            this.print = new System.Windows.Forms.Button();
+            this.execButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.printButton = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -97,32 +97,33 @@
             this.balance.Name = "balance";
             this.balance.ReadOnly = true;
             // 
-            // exec
+            // execButton
             // 
-            this.exec.Location = new System.Drawing.Point(49, 330);
-            this.exec.Name = "exec";
-            this.exec.Size = new System.Drawing.Size(96, 38);
-            this.exec.TabIndex = 4;
-            this.exec.Text = "Выполнить";
-            this.exec.UseVisualStyleBackColor = true;
+            this.execButton.Location = new System.Drawing.Point(49, 330);
+            this.execButton.Name = "execButton";
+            this.execButton.Size = new System.Drawing.Size(96, 38);
+            this.execButton.TabIndex = 4;
+            this.execButton.Text = "Выполнить";
+            this.execButton.UseVisualStyleBackColor = true;
             // 
-            // close
+            // closeButton
             // 
-            this.close.Location = new System.Drawing.Point(151, 330);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(96, 38);
-            this.close.TabIndex = 5;
-            this.close.Text = "Закрыть";
-            this.close.UseVisualStyleBackColor = true;
+            this.closeButton.Location = new System.Drawing.Point(151, 330);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(96, 38);
+            this.closeButton.TabIndex = 5;
+            this.closeButton.Text = "Закрыть";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.close_Click);
             // 
-            // print
+            // printButton
             // 
-            this.print.Location = new System.Drawing.Point(296, 330);
-            this.print.Name = "print";
-            this.print.Size = new System.Drawing.Size(96, 38);
-            this.print.TabIndex = 6;
-            this.print.Text = "Печать";
-            this.print.UseVisualStyleBackColor = true;
+            this.printButton.Location = new System.Drawing.Point(296, 330);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(96, 38);
+            this.printButton.TabIndex = 6;
+            this.printButton.Text = "Печать";
+            this.printButton.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -142,9 +143,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 380);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.print);
-            this.Controls.Add(this.close);
-            this.Controls.Add(this.exec);
+            this.Controls.Add(this.printButton);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.execButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -164,9 +165,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn number;
         private System.Windows.Forms.DataGridViewTextBoxColumn komplekt;
         private System.Windows.Forms.DataGridViewTextBoxColumn balance;
-        private System.Windows.Forms.Button exec;
-        private System.Windows.Forms.Button close;
-        private System.Windows.Forms.Button print;
+        private System.Windows.Forms.Button execButton;
+        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button printButton;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
