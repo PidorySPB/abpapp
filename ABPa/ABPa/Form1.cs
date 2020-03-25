@@ -161,17 +161,17 @@ namespace ABPa
         private void downloadB_Click(object sender, EventArgs e)
         {
             int c = 0;
-            if (textBoxDron.Text.Length > 0)
+            if (textBoxDron.Text != "Выбор файла")
             {
                 OpenExcel(textBoxDron.Text,0);
                 c++;
             }
-            if (textBoxParts.Text.Length > 0)
+            if (textBoxParts.Text != "Выбор файла")
             {
                 OpenExcel(textBoxParts.Text, 1);
                 c++;
             }
-            if (textBoxTech.Text.Length > 0)
+            if (textBoxTech.Text != "Выбор файла")
             {
                 OpenExcel(textBoxTech.Text, 2);
                 c++;

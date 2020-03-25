@@ -16,7 +16,7 @@ namespace ABPa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new downloadForm());
+            Application.Run(new MainForm());
         }
     }
 }
