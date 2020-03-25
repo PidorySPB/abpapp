@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms; 
+using System.Windows.Forms;
 
 namespace ABPa
 {
@@ -23,6 +23,9 @@ namespace ABPa
                 s=OPF.FileName.ToString();
             }
             return s;
+        }
+        public void OpenExcel() {
+           
         }
         public downloadForm()
         {
@@ -54,7 +57,14 @@ namespace ABPa
 
         private void downloadB_Click(object sender, EventArgs e)
         {
-          //  if(textBoxT)
+            if (textBoxDron.Text.Length > 0)
+            {
+
+            }
+
+          if (textBoxTech.Text.Length > 0)
+
+          if (textBoxParts.Text.Length > 0)
         }
     }
 }
