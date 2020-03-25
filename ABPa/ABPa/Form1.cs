@@ -86,15 +86,15 @@ namespace ABPa
                                 MessageBox.Show(xlRange.Cells[i, j].Value2.ToString());
                         }*/
                     }
-                if (textbox == 0)
+                if (textbox == 2)
                     for (int i = 2; i <= rowCount; i++)
                     {
                         try
                         {
                             int num;
-                            if (Int32.TryParse(xlRange.Cells[i, 3].Value2.ToString(), out num))
+                            if (Int32.TryParse(xlRange.Cells[i, 4].Value2.ToString(), out num))
                             {
-                                query = String.Format("INSERT INTO technologicalMap(name, cost) VALUES('{0}','{1}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString());
+                                query = String.Format("INSERT INTO technologicalMap(dron, detail, count) VALUES('{0}','{1}','{2}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString(), xlRange.Cells[i, 4].Value2.ToString());
                                 var cmd = new MySqlCommand(query, dbCon.Connection);
                                 cmd.ExecuteNonQuery();
                             }
@@ -112,7 +112,8 @@ namespace ABPa
                         }*/
                     }
             }
-            else {
+            else 
+            {
                 MessageBox.Show("Ошибка связи с сервером");
             }
             dbCon.Close();
@@ -127,6 +128,13 @@ namespace ABPa
             textBoxDron.ReadOnly = true;
             textBoxParts.ReadOnly = true;
             textBoxTech.ReadOnly = true;
+            textBoxDron.Text = "Выбор файла";
+            textBoxParts.Text = "Выбор файла";
+            textBoxTech.Text = "Выбор файла";
+            textBoxDron.ForeColor = Color.LightGray;
+            textBoxParts.ForeColor = Color.LightGray;
+            textBoxTech.ForeColor = Color.LightGray;
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -162,6 +170,12 @@ namespace ABPa
                 OpenExcel(textBoxParts.Text, 1);
                 c++;
             }
+            if (textBoxTech.Text.Length > 0)
+            {
+                OpenExcel(textBoxTech.Text, 2);
+                c++;
+            }
+
             if (c == 0)
             {
                 MessageBox.Show("Нужно выбрать файл");
@@ -174,6 +188,11 @@ namespace ABPa
         private void closeB_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
