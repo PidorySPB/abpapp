@@ -42,7 +42,7 @@ namespace ABPa
                 if (textbox == 1)
                     try
                     {
-                        for (int i = 1; i <= rowCount; i++)
+                        for (int i = 2; i <= rowCount; i++)
                     {
                        
                             query = String.Format("INSERT INTO parts(name, category) VALUES('{0}','{1}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString());
@@ -62,11 +62,11 @@ namespace ABPa
                         MessageBox.Show("MysqlError: " + err.ToString());
                     }
                 if (textbox == 0)
-                    for (int i = 1; i <= rowCount; i++)
+                    for (int i = 2; i <= rowCount; i++)
                     {
                         try
                         {
-                            query = String.Format("INSERT INTO parts(name, category) VALUES({0},{1})", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString());
+                            query = String.Format("INSERT INTO spisokDronov(name, cost) VALUES('{0}','{1}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString());
                             var cmd = new MySqlCommand(query, dbCon.Connection);
                             cmd.ExecuteNonQuery();
                         }
