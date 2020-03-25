@@ -14,7 +14,15 @@ namespace ABPa
     {
         public Form2()
         {
+            DateTime thisDay = DateTime.Today;
             InitializeComponent();
+            label1.Text = "Поступление комплектующих №000000 от "+ thisDay.ToString("d");
+        }
+
+        
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
