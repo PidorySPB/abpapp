@@ -48,7 +48,7 @@ namespace ABPa
             {
                 if (String.IsNullOrEmpty(databaseName) || String.IsNullOrEmpty(host))
                     return false;
-                string connstring = string.Format("Server={1}; Database={0}; User Id={0}; Password=Q12we34rt5", databaseName,host);
+                string connstring = string.Format("Server={1};Port=3306;Database={0};Uid={0};Pwd=Q12we34rt5", databaseName,host);
                 connection = new MySqlConnection(connstring);
                 connection.Open();
             }
