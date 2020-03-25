@@ -15,6 +15,10 @@ namespace ABPa
         public ostatki()
         {
             InitializeComponent();
+            DateTime thisDay = DateTime.Today;
+            dateTimePicker1.MaxDate = thisDay;
+            dateTimePicker1.Value = thisDay;
+
         }
     }
 }
