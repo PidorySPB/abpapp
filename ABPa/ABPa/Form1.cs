@@ -66,9 +66,13 @@ namespace ABPa
                     {
                         try
                         {
-                            query = String.Format("INSERT INTO spisokDronov(name, cost) VALUES('{0}','{1}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString());
-                            var cmd = new MySqlCommand(query, dbCon.Connection);
-                            cmd.ExecuteNonQuery();
+                            int num;
+                            if (Int32.TryParse(xlRange.Cells[i, 3].Value2.ToString(), out num))
+                            {
+                                query = String.Format("INSERT INTO spisokDronov(name, cost) VALUES('{0}','{1}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString());
+                                var cmd = new MySqlCommand(query, dbCon.Connection);
+                                cmd.ExecuteNonQuery();
+                            }
                         }
                         catch (MySqlException err)
                         {
