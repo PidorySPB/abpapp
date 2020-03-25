@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,17 @@ namespace ABPa
 {
     public partial class downloadForm : Form
     {
+        public string openFolder()
+        {
+            string s="";
+            OpenFileDialog OPF = new OpenFileDialog();
+            OPF.Filter = "Файл xls|*.xls|Файл xlsx|*.xlsx";
+            if (OPF.ShowDialog() == DialogResult.OK)
+            {
+                s=OPF.FileName.ToString();
+            }
+            return s;
+        }
         public downloadForm()
         {
             InitializeComponent();
@@ -20,6 +32,11 @@ namespace ABPa
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+            
+        private void openButtonDron_Click(object sender, EventArgs e)
+        {
+            textBoxDron.Text = openFolder();
         }
     }
 }
