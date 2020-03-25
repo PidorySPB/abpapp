@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Excel;
 
 namespace ABPa
 {
@@ -24,8 +25,28 @@ namespace ABPa
             }
             return s;
         }
-        public void OpenExcel() {
-           
+        public void OpenExcel(string path) {
+            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(path);
+            Microsoft.Office.Interop.Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+            Microsoft.Office.Interop.Excel.Range xlRange = xlWorksheet.UsedRange;
+            int rowCount = xlRange.Rows.Count;
+            int colCount = xlRange.Columns.Count;
+            for (int i = 1; i <= rowCount; i++)
+            {
+                for (int j = 1; j <= colCount; j++)
+                {
+                 
+                    if (j == 1)
+                        Console.Write("\r\n"); 
+                    if (xlRange.Cells[i, j] != null && xlRange.Cells[i, j].Value2 != null)
+                        MessageBox.Show(xlRange.Cells[i, j].Value2.ToString()); 
+                }
+            } 
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            xlWorkbook.Close();
+
         }
         public downloadForm()
         {
@@ -59,12 +80,12 @@ namespace ABPa
         {
             if (textBoxDron.Text.Length > 0)
             {
-
+                OpenExcel(textBoxDron.Text);
             }
 
-          if (textBoxTech.Text.Length > 0)
+         // if (textBoxTech.Text.Length > 0)
 
-          if (textBoxParts.Text.Length > 0)
+          //if (textBoxParts.Text.Length > 0)
         }
     }
 }
