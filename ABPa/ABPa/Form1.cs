@@ -40,28 +40,32 @@ namespace ABPa
             if (dbCon.IsConnect())
             {
                 if (textbox == 1)
+                {
                     try
                     {
                         for (int i = 2; i <= rowCount; i++)
-                    {
-                       
+                        {
+
                             query = String.Format("INSERT INTO parts(name, category) VALUES('{0}','{1}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString());
                             var cmd = new MySqlCommand(query, dbCon.Connection);
                             cmd.ExecuteNonQuery();
-                        
-                        /* for (int j = 1; j <= colCount; j++)
-                        {
 
-                            if (xlRange.Cells[i, j] != null && xlRange.Cells[i, j].Value2 != null)
-                                MessageBox.Show(xlRange.Cells[i, j].Value2.ToString());
-                        }*/
-                    }
+                            /* for (int j = 1; j <= colCount; j++)
+                            {
+
+                                if (xlRange.Cells[i, j] != null && xlRange.Cells[i, j].Value2 != null)
+                                    MessageBox.Show(xlRange.Cells[i, j].Value2.ToString());
+                            }*/
+                        }
                     }
                     catch (MySqlException err)
                     {
                         MessageBox.Show("MysqlError: " + err.ToString());
                     }
+                    textBoxDron.Text = "Данные успешно добавились";
+                }
                 if (textbox == 0)
+                {
                     for (int i = 2; i <= rowCount; i++)
                     {
                         try
@@ -86,16 +90,19 @@ namespace ABPa
                                 MessageBox.Show(xlRange.Cells[i, j].Value2.ToString());
                         }*/
                     }
-                if (textbox == 2) 
+                    textBoxDron.Text = "Данные успешно добавились";
+                }
+                if (textbox == 2)
+                {
                     for (int i = 2; i <= rowCount; i++)
                     {
                         try
                         {
                             int num;
-                             if (Int32.TryParse(xlRange.Cells[i, 4].Value2.ToString(), out num))
+                            if (Int32.TryParse(xlRange.Cells[i, 4].Value2.ToString(), out num))
                             {
                                 query = String.Format("INSERT INTO technologicalMap(dron, detail, count) VALUES('{0}','{1}','{2}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString(), xlRange.Cells[i, 4].Value2.ToString());
- 
+
                                 var cmd = new MySqlCommand(query, dbCon.Connection);
                                 cmd.ExecuteNonQuery();
                             }
@@ -112,6 +119,8 @@ namespace ABPa
                                 MessageBox.Show(xlRange.Cells[i, j].Value2.ToString());
                         }*/
                     }
+                    textBoxDron.Text = "Данные успешно добавились";
+                }
             }
             else 
             {
@@ -161,17 +170,17 @@ namespace ABPa
         private void downloadB_Click(object sender, EventArgs e)
         {
             int c = 0;
-            if (textBoxDron.Text != "Выбор файла")
+            if (textBoxDron.Text != "Выбор файла" && textBoxDron.Text != "Данные успешно добавились")
             {
                 OpenExcel(textBoxDron.Text,0);
                 c++;
             }
-            if (textBoxParts.Text != "Выбор файла")
+            if (textBoxParts.Text != "Выбор файла" && textBoxParts.Text!= "Данные успешно добавились")
             {
                 OpenExcel(textBoxParts.Text, 1);
                 c++;
             }
-            if (textBoxTech.Text != "Выбор файла")
+            if (textBoxTech.Text != "Выбор файла" && textBoxTech.Text != "Данные успешно добавились")
             {
                 OpenExcel(textBoxTech.Text, 2);
                 c++;
@@ -180,7 +189,7 @@ namespace ABPa
             if (c == 0)
             {
                 MessageBox.Show("Нужно выбрать файл");
-            }
+            } 
          // if (textBoxTech.Text.Length > 0)
 
           //if (textBoxParts.Text.Length > 0)

@@ -86,6 +86,7 @@
             this.uploadB.TabIndex = 4;
             this.uploadB.Text = "Записать";
             this.uploadB.UseVisualStyleBackColor = true;
+            this.uploadB.Click += new System.EventHandler(this.uploadB_Click);
             // 
             // closeB
             // 
@@ -95,6 +96,7 @@
             this.closeB.TabIndex = 5;
             this.closeB.Text = "Закрыть";
             this.closeB.UseVisualStyleBackColor = true;
+            this.closeB.Click += new System.EventHandler(this.closeB_Click);
             // 
             // dataGridView1
             // 
