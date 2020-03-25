@@ -102,21 +102,35 @@
             // 
             // downloadButton
             // 
-            this.button1.Location = new System.Drawing.Point(111, 182);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.downloadButton.Location = new System.Drawing.Point(122, 182);
+            this.downloadButton.Name = "downloadButton";
+            this.downloadButton.Size = new System.Drawing.Size(75, 23);
+            this.downloadButton.TabIndex = 11;
+            // 
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(272, 182);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.TabIndex = 10;
+            // 
+            // openButtonTech
+            // 
+            this.openButtonTech.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openButtonTech.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openButtonTech.Location = new System.Drawing.Point(313, 147);
+            this.openButtonTech.Name = "openButtonTech";
+            this.openButtonTech.Size = new System.Drawing.Size(43, 20);
+            this.openButtonTech.TabIndex = 0;
             // 
             // openButtonParts
             // 
-            this.button2.Location = new System.Drawing.Point(206, 182);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.openButtonParts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openButtonParts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openButtonParts.Location = new System.Drawing.Point(313, 99);
+            this.openButtonParts.Name = "openButtonParts";
+            this.openButtonParts.Size = new System.Drawing.Size(43, 20);
+            this.openButtonParts.TabIndex = 1;
             // 
             // openButtonDron
             // 
