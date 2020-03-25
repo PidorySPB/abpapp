@@ -64,17 +64,34 @@ namespace ABPa
             if (dbCon.IsConnect())
             {
                 string query = "";
-                MessageBox.Show(dataGridView1.Rows[0].Cells[0].Value.ToString());
+                for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
+                {
+                    // if (dataGridView1.Rows[i].Cells[0].Value.ToString() != "" && dataGridView1.Rows[i].Cells[1].Value.ToString() != "" && dataGridView1.Rows[i].Cells[2].Value.ToString() != "")
+                    // {
+                    query = String.Format("INSERT INTO priem(name, serial,count,employee,date) VALUES('{0}','{1}','{2}','{3}','{4}')",
+                        dataGridView1.Rows[i].Cells[0].Value.ToString(),
+                        dataGridView1.Rows[i].Cells[1].Value.ToString(),
+                        dataGridView1.Rows[i].Cells[2].Value.ToString(),
+                        nameTBox.Text.ToString(),
+                        thisDay.ToString("d"));
+                    var cmd = new MySqlCommand(query, dbCon.Connection);
+                    var reader = cmd.ExecuteNonQuery();
+                    // }
+                    // else
+                    // {
+                    //     MessageBox.Show("Ошибка добавления");
+                    // }
                     //for(int j = 0; j < 3; j++)
                     //  {
                     //  if (dataGridView1.Rows[i].Cells[j].Value != null)
                     // }
-                //}
+                }
             }
             else
             {
                 MessageBox.Show("Ошибка с сервером");
             }
+            dbCon.Close();
         }
     }
 }
