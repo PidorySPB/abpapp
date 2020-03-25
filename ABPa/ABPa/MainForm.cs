@@ -20,15 +20,18 @@ namespace ABPa
         private void addButton_Click(object sender, EventArgs e)
         {
             Form2 form = new Form2();
+            
             form.ShowDialog();
-            this.Close();
+            //this.Close();
         }
 
         private void loadButton_Click(object sender, EventArgs e)
         {
             downloadForm form = new downloadForm();
+            
             form.ShowDialog();
-            this.Close();
+            //this.Close();
+
         }
     }
 }
