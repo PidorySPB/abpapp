@@ -20,6 +20,12 @@ namespace ABPa
             get { return databaseName; }
             set { databaseName = value; }
         }
+        private string host = string.Empty;
+        public string Host
+        {
+            get { return host; }
+            set { host = value; }
+        }
 
         public string Password { get; set; }
         private MySqlConnection connection = null;
@@ -40,9 +46,9 @@ namespace ABPa
         {
             if (Connection == null)
             {
-                if (String.IsNullOrEmpty(databaseName))
+                if (String.IsNullOrEmpty(databaseName) || String.IsNullOrEmpty(host))
                     return false;
-                string connstring = string.Format("Server=localhost; database={0}; UID={0}; password=Q12we34rt5", databaseName);
+                string connstring = string.Format("Server={1}; Database={0}; User Id={0}; Password=Q12we34rt5", databaseName,host);
                 connection = new MySqlConnection(connstring);
                 connection.Open();
             }
