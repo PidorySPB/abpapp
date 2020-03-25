@@ -35,8 +35,8 @@
             this.textBoxDron = new System.Windows.Forms.TextBox();
             this.textBoxParts = new System.Windows.Forms.TextBox();
             this.textBoxTech = new System.Windows.Forms.TextBox();
-            this.downloadButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
+            this.downloadB = new System.Windows.Forms.Button();
+            this.closeB = new System.Windows.Forms.Button();
             this.openButtonTech = new System.Windows.Forms.Button();
             this.openButtonParts = new System.Windows.Forms.Button();
             this.openButtonDron = new System.Windows.Forms.Button();
@@ -100,19 +100,21 @@
             this.textBoxTech.Size = new System.Drawing.Size(192, 20);
             this.textBoxTech.TabIndex = 6;
             // 
-            // downloadButton
+            // downloadB
             // 
-            this.downloadButton.Location = new System.Drawing.Point(122, 182);
-            this.downloadButton.Name = "downloadButton";
-            this.downloadButton.Size = new System.Drawing.Size(75, 23);
-            this.downloadButton.TabIndex = 11;
+            this.downloadB.Location = new System.Drawing.Point(122, 182);
+            this.downloadB.Name = "downloadB";
+            this.downloadB.Size = new System.Drawing.Size(75, 23);
+            this.downloadB.TabIndex = 11;
+            this.downloadB.Text = "Загрузить";
             // 
-            // closeButton
+            // closeB
             // 
-            this.closeButton.Location = new System.Drawing.Point(272, 182);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(75, 23);
-            this.closeButton.TabIndex = 10;
+            this.closeB.Location = new System.Drawing.Point(272, 182);
+            this.closeB.Name = "closeB";
+            this.closeB.Size = new System.Drawing.Size(75, 23);
+            this.closeB.TabIndex = 10;
+            this.closeB.Text = "Закрыть";
             // 
             // openButtonTech
             // 
@@ -158,8 +160,8 @@
             this.Controls.Add(this.openButtonTech);
             this.Controls.Add(this.openButtonParts);
             this.Controls.Add(this.openButtonDron);
-            this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.downloadButton);
+            this.Controls.Add(this.closeB);
+            this.Controls.Add(this.downloadB);
             this.Controls.Add(this.textBoxTech);
             this.Controls.Add(this.textBoxParts);
             this.Controls.Add(this.textBoxDron);
@@ -183,8 +185,8 @@
         private System.Windows.Forms.TextBox textBoxDron;
         private System.Windows.Forms.TextBox textBoxParts;
         private System.Windows.Forms.TextBox textBoxTech;
-        private System.Windows.Forms.Button downloadButton;
-        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button downloadB;
+        private System.Windows.Forms.Button closeB;
         private System.Windows.Forms.Button openButtonDron;
         private System.Windows.Forms.Button openButtonParts;
         private System.Windows.Forms.Button openButtonTech;
