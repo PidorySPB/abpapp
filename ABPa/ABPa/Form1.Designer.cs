@@ -116,6 +116,7 @@
             this.closeB.Size = new System.Drawing.Size(75, 23);
             this.closeB.TabIndex = 10;
             this.closeB.Text = "Закрыть";
+            this.closeB.Click += new System.EventHandler(this.closeB_Click);
             // 
             // openButtonTech
             // 
