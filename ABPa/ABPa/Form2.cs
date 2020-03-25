@@ -16,7 +16,7 @@ namespace ABPa
         {
             DateTime thisDay = DateTime.Today;
             InitializeComponent();
-            label1.Text = "Поступление комплектующих №000000 от "+ thisDay.ToString("d");
+            label1.Text = "Поступление комплектующих №"+1+" от "+ thisDay.ToString("d");
         }
 
         

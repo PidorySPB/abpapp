@@ -23,5 +23,12 @@ namespace ABPa
             form.ShowDialog();
             this.Close();
         }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+            downloadForm form = new downloadForm();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }
