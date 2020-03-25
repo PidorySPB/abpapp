@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ABPa
 {
-    public partial class Form1 : Form
+    public partial class downloadForm : Form
     {
-        public Form1()
+        public downloadForm()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
