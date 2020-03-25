@@ -73,6 +73,7 @@ namespace ABPa
                         catch (MySqlException err)
                         {
                             MessageBox.Show("MysqlError: " + err.ToString());
+                            return;
                         }
                         /* for (int j = 1; j <= colCount; j++)
                         {
