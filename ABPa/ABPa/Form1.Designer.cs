@@ -122,6 +122,7 @@
             this.openButtonTech.Name = "openButtonTech";
             this.openButtonTech.Size = new System.Drawing.Size(43, 20);
             this.openButtonTech.TabIndex = 0;
+            this.openButtonTech.Click += new System.EventHandler(this.openButtonTech_Click);
             // 
             // openButtonParts
             // 
@@ -131,6 +132,7 @@
             this.openButtonParts.Name = "openButtonParts";
             this.openButtonParts.Size = new System.Drawing.Size(43, 20);
             this.openButtonParts.TabIndex = 1;
+            this.openButtonParts.Click += new System.EventHandler(this.openButtonParts_Click);
             // 
             // openButtonDron
             // 

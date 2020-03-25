@@ -38,5 +38,15 @@ namespace ABPa
         {
             textBoxDron.Text = openFolder();
         }
+
+        private void openButtonParts_Click(object sender, EventArgs e)
+        {
+            textBoxParts.Text = openFolder();
+        }
+
+        private void openButtonTech_Click(object sender, EventArgs e)
+        {
+            textBoxTech.Text = openFolder();
+        }
     }
 }
