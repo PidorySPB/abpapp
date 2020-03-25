@@ -19,29 +19,33 @@ namespace ABPa
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form2 form = new Form2();
-            
             form.ShowDialog();
-            //this.Close();
+            this.Show();
         }
 
         private void loadButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             downloadForm form = new downloadForm();
-            
             form.ShowDialog();
-            //this.Close();
-
+            this.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
             ostatki form = new ostatki();
             form.ShowDialog();
-            Close();
+            this.Show();
 
 
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

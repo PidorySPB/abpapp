@@ -30,12 +30,13 @@
         {
             this.addButton = new System.Windows.Forms.Button();
             this.loadButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ostatkiButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(99, 33);
+            this.addButton.Location = new System.Drawing.Point(89, 22);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(197, 23);
             this.addButton.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // loadButton
             // 
-            this.loadButton.Location = new System.Drawing.Point(99, 76);
+            this.loadButton.Location = new System.Drawing.Point(89, 65);
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(197, 23);
             this.loadButton.TabIndex = 1;
@@ -53,22 +54,33 @@
             this.loadButton.UseVisualStyleBackColor = true;
             this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
             // 
-            // button1
+            // ostatkiButton
             // 
-            this.button1.Location = new System.Drawing.Point(99, 117);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Остатки комплектующих";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ostatkiButton.Location = new System.Drawing.Point(89, 106);
+            this.ostatkiButton.Name = "ostatkiButton";
+            this.ostatkiButton.Size = new System.Drawing.Size(197, 23);
+            this.ostatkiButton.TabIndex = 2;
+            this.ostatkiButton.Text = "Остатки комплектующих";
+            this.ostatkiButton.UseVisualStyleBackColor = true;
+            this.ostatkiButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(307, 159);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.TabIndex = 3;
+            this.closeButton.Text = "Выход";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 194);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.ostatkiButton);
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.addButton);
             this.Name = "MainForm";
@@ -81,6 +93,7 @@
 
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button loadButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ostatkiButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }
