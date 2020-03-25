@@ -25,5 +25,27 @@ namespace ABPa
         {
             this.Close();
         }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            ExcelApp.Application.Workbooks.Add(Type.Missing);
+            ExcelApp.Columns.ColumnWidth = 15;
+
+            ExcelApp.Cells[1, 1] = "№п/п";
+            ExcelApp.Cells[1, 2] = "Комплектующие";
+            ExcelApp.Cells[1, 3] = "Остаток";
+
+
+            for (int i = 0; i < dataGridViewOst.ColumnCount; i++)
+            {
+                for (int j = 0; j < dataGridViewOst.RowCount; j++)
+                {
+                    ExcelApp.Cells[j + 2, i + 1] = (dataGridViewOst[i, j].Value).ToString();
+                }
+            }
+            ExcelApp.Visible = true;
+        }
+    }
     }
 }

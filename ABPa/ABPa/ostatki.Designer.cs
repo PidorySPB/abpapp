@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewOst = new System.Windows.Forms.DataGridView();
             this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.komplekt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,7 +38,7 @@
             this.closeButton = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOst)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,20 +61,20 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Показывать данные на:";
             // 
-            // dataGridView1
+            // dataGridViewOst
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewOst.AllowUserToAddRows = false;
+            this.dataGridViewOst.AllowUserToDeleteRows = false;
+            this.dataGridViewOst.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOst.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.number,
             this.komplekt,
             this.balance});
-            this.dataGridView1.Location = new System.Drawing.Point(49, 97);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(343, 227);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridViewOst.Location = new System.Drawing.Point(49, 97);
+            this.dataGridViewOst.Name = "dataGridViewOst";
+            this.dataGridViewOst.ReadOnly = true;
+            this.dataGridViewOst.Size = new System.Drawing.Size(343, 227);
+            this.dataGridViewOst.TabIndex = 3;
             // 
             // number
             // 
@@ -124,6 +124,7 @@
             this.printButton.TabIndex = 6;
             this.printButton.Text = "Печать";
             this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
             // dateTimePicker1
             // 
@@ -146,12 +147,12 @@
             this.Controls.Add(this.printButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.execButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewOst);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ostatki";
             this.Text = "Остатки комплектующих";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOst)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,7 +162,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewOst;
         private System.Windows.Forms.DataGridViewTextBoxColumn number;
         private System.Windows.Forms.DataGridViewTextBoxColumn komplekt;
         private System.Windows.Forms.DataGridViewTextBoxColumn balance;
