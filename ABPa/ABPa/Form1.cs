@@ -42,7 +42,7 @@ namespace ABPa
                 if (textbox == 1)
                     try
                     {
-                        for (int i = 1; i <= rowCount; i++)
+                        for (int i = 2; i <= rowCount; i++)
                     {
                        
                             query = String.Format("INSERT INTO parts(name, category) VALUES('{0}','{1}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString());
