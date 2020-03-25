@@ -107,6 +107,7 @@
             this.downloadB.Size = new System.Drawing.Size(75, 23);
             this.downloadB.TabIndex = 11;
             this.downloadB.Text = "Загрузить";
+            this.downloadB.Click += new System.EventHandler(this.downloadB_Click);
             // 
             // closeB
             // 

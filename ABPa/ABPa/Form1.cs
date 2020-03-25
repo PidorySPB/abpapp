@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms; 
 
 namespace ABPa
 {
@@ -27,6 +27,9 @@ namespace ABPa
         public downloadForm()
         {
             InitializeComponent();
+            textBoxDron.ReadOnly = true;
+            textBoxParts.ReadOnly = true;
+            textBoxTech.ReadOnly = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -47,6 +50,11 @@ namespace ABPa
         private void openButtonTech_Click(object sender, EventArgs e)
         {
             textBoxTech.Text = openFolder();
+        }
+
+        private void downloadB_Click(object sender, EventArgs e)
+        {
+          //  if(textBoxT)
         }
     }
 }
