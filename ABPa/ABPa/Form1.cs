@@ -86,6 +86,31 @@ namespace ABPa
                                 MessageBox.Show(xlRange.Cells[i, j].Value2.ToString());
                         }*/
                     }
+                if (textbox == 0)
+                    for (int i = 2; i <= rowCount; i++)
+                    {
+                        try
+                        {
+                            int num;
+                            if (Int32.TryParse(xlRange.Cells[i, 3].Value2.ToString(), out num))
+                            {
+                                query = String.Format("INSERT INTO technologicalMap(name, cost) VALUES('{0}','{1}')", xlRange.Cells[i, 2].Value2.ToString(), xlRange.Cells[i, 3].Value2.ToString());
+                                var cmd = new MySqlCommand(query, dbCon.Connection);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (MySqlException err)
+                        {
+                            MessageBox.Show("MysqlError: " + err.ToString());
+                            return;
+                        }
+                        /* for (int j = 1; j <= colCount; j++)
+                        {
+
+                            if (xlRange.Cells[i, j] != null && xlRange.Cells[i, j].Value2 != null)
+                                MessageBox.Show(xlRange.Cells[i, j].Value2.ToString());
+                        }*/
+                    }
             }
             else {
                 MessageBox.Show("Ошибка связи с сервером");
