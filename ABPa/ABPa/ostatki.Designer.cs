@@ -57,9 +57,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(46, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 17);
+            this.label2.Size = new System.Drawing.Size(165, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Показывать остатки на:";
+            this.label2.Text = "Показывать данные на:";
             // 
             // dataGridView1
             // 
@@ -72,7 +72,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(49, 97);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(343, 197);
+            this.dataGridView1.Size = new System.Drawing.Size(343, 227);
             this.dataGridView1.TabIndex = 3;
             // 
             // number
@@ -98,7 +98,7 @@
             // 
             // exec
             // 
-            this.exec.Location = new System.Drawing.Point(49, 314);
+            this.exec.Location = new System.Drawing.Point(49, 330);
             this.exec.Name = "exec";
             this.exec.Size = new System.Drawing.Size(96, 38);
             this.exec.TabIndex = 4;
@@ -107,7 +107,7 @@
             // 
             // close
             // 
-            this.close.Location = new System.Drawing.Point(151, 314);
+            this.close.Location = new System.Drawing.Point(151, 330);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(96, 38);
             this.close.TabIndex = 5;
@@ -116,7 +116,7 @@
             // 
             // print
             // 
-            this.print.Location = new System.Drawing.Point(296, 314);
+            this.print.Location = new System.Drawing.Point(296, 330);
             this.print.Name = "print";
             this.print.Size = new System.Drawing.Size(96, 38);
             this.print.TabIndex = 6;
@@ -131,7 +131,7 @@
             this.dateTimePicker1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.Size = new System.Drawing.Size(140, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(98, 20);
             this.dateTimePicker1.TabIndex = 7;
             this.dateTimePicker1.Value = new System.DateTime(2020, 3, 25, 0, 0, 0, 0);
             // 
