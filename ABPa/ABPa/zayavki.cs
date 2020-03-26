@@ -18,8 +18,8 @@ namespace ABPa
         public zayavki()
         {
             InitializeComponent();
-            
-           
+
+
             var dbCon = DBConn.Instance();
             dbCon.Connection = null;
             dbCon.DatabaseName = "570_abp";
@@ -33,7 +33,7 @@ namespace ABPa
                 {
                     allCount = reader.GetInt32(0);
                     allCount += 1;
-                    zayavkaLabel.Text = "Заявка №"+allCount + " от " + thisDay.ToString("d");
+                    zayavkaLabel.Text = "Заявка №" + allCount + " от " + thisDay.ToString("d");
                 }
             }
             else
@@ -41,13 +41,13 @@ namespace ABPa
                 MessageBox.Show("Ошибка связи с сервером");
             }
 
-          
+
 
 
             dbCon.Close();
 
 
-            
+
             dbCon.Connection = null;
             dbCon.DatabaseName = "570_abp";
             dbCon.Host = "5.187.7.31";
@@ -98,38 +98,44 @@ namespace ABPa
             dbCon.Host = "5.187.7.31";
             if (dbCon.IsConnect())
             {
-               
+
                 string query = "";
                 try
                 {
-                   
-                        if (fio.Text.ToString() != ""
-                           // && dataGridView1.Rows[i].Cells[1].Value.ToString() != ""
-                           && droneList.SelectedItem.ToString() != ""
-                           && count.Text != "")
-                        {
-                           
-                            query = String.Format("INSERT INTO zayvki(fio, drone, count, date_of_zakaz, date_of_change, state, num) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",
-                                fio.Text.ToString(),
-                                droneList.SelectedItem.ToString(),
-                                count.Text.ToString(),
-                                thisDay.ToString("d"),
-                                thisDay.ToString("d"),
-                                "Создан",
-                                allCount.ToString());
-                                var cmd = new MySqlCommand(query, dbCon.Connection);
-                                cmd.ExecuteNonQuery();
-                            
-                            
-                        }
-                        else
-                        {
-                            MessageBox.Show("Ошибка добавления");
-                        }
+
+                    if (fio.Text.ToString() != ""
+                       // && dataGridView1.Rows[i].Cells[1].Value.ToString() != ""
+                       && droneList.SelectedItem.ToString() != ""
+                       && count.Text != "")
+                    {
+
+                        query = String.Format("INSERT INTO zayvki(fio, drone, count, date_of_zakaz, date_of_change, state, num) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",
+                            fio.Text.ToString(),
+                            droneList.SelectedItem.ToString(),
+                            count.Text.ToString(),
+                            thisDay.ToString("d"),
+                            thisDay.ToString("d"),
+                            "Создан",
+                            allCount.ToString());
+                        var cmd = new MySqlCommand(query, dbCon.Connection);
+                        cmd.ExecuteNonQuery();
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ошибка добавления");
+                    }
+
+                }
+                catch (MySqlException ee)
+                {
+                    MessageBox.Show("MysqlError: " + ee.ToString());
+                }
 
 
 
-
-                    
+            }
+        }
     }
 }
