@@ -31,7 +31,7 @@ namespace ABPa
                 while (reader.Read())
                 {
                     allCount = reader.GetInt32(0);
-                    allCount += 1;
+                   // allCount += 1;
                     zayavkaLabel.Text = "Заявка №"+allCount + "от" + thisDay.ToString("d");
                 }
             }
