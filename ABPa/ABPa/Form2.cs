@@ -16,10 +16,12 @@ namespace ABPa {
     public partial class Form2 : Form
     {
         int allCount;
+        int currencell;
         DateTime thisDay = DateTime.Today;
         public Form2()
         {
             var dbCon = DBConn.Instance();
+            dbCon.Connection = null;
             dbCon.DatabaseName = "570_abp";
             dbCon.Host = "5.187.7.31";
             InitializeComponent();
@@ -43,11 +45,6 @@ namespace ABPa {
 
         
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -125,27 +122,49 @@ namespace ABPa {
         {
             if (dataGridView1.CurrentCell.ColumnIndex == 2 || dataGridView1.CurrentCell.ColumnIndex == 1)
             {
+                currencell = 1;
                 TextBox b = (TextBox)e.Control;
                 b.KeyPress += new KeyPressEventHandler(b_KeyPress);
+                //b = null;
             }
+            else
+                currencell = 0; 
         }
             void b_KeyPress(object senderr, KeyPressEventArgs ee)
             {
-                if (!(Char.IsDigit(ee.KeyChar))){
+            if (currencell == 1)
+            {
+                if (!(Char.IsDigit(ee.KeyChar)))
+                {
                     if (ee.KeyChar != (char)Keys.Back)
                         ee.Handled = true;
                 }
-            }
+            } 
+            /* if (!(Char.IsDigit(ee.KeyChar))){
+                 if (ee.KeyChar != (char)Keys.Back)
+                     ee.Handled = true;
+             }*/
+        }
+        void b_KeyPress1(object senderr, KeyPressEventArgs ee)
+        {
+             
+                    ee.Handled = true; 
+        }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                MessageBox.Show(dataGridView1.Rows[0].Cells[0].Value.ToString());
+              //  MessageBox.Show(dataGridView1.Rows[0].Cells[0].Value.ToString());
             }catch(Exception ee)
             {
 
             }
+        }
+
+        private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+             
         }
     }
 }
