@@ -62,7 +62,7 @@
             this.count.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.count.Location = new System.Drawing.Point(178, 169);
             this.count.Name = "count";
-            this.count.Size = new System.Drawing.Size(157, 29);
+            this.count.Size = new System.Drawing.Size(306, 29);
             this.count.TabIndex = 3;
             // 
             // label2
@@ -117,10 +117,12 @@
             // 
             // droneList
             // 
+            this.droneList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.droneList.FormattingEnabled = true;
+            this.droneList.ItemHeight = 24;
             this.droneList.Location = new System.Drawing.Point(178, 133);
             this.droneList.Name = "droneList";
-            this.droneList.Size = new System.Drawing.Size(157, 30);
+            this.droneList.Size = new System.Drawing.Size(306, 28);
             this.droneList.TabIndex = 10;
             // 
             // zayavki
