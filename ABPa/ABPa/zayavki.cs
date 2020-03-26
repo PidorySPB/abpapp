@@ -32,7 +32,7 @@ namespace ABPa
                 while (reader.Read())
                 {
                     allCount = reader.GetInt32(0);
-                    allCount += 1;
+                    allCount++;
                     zayavkaLabel.Text = "Заявка №" + allCount + " от " + thisDay.ToString("d");
                 }
             }
@@ -105,26 +105,30 @@ namespace ABPa
 
                     if (fio.Text.ToString() != ""
                        // && dataGridView1.Rows[i].Cells[1].Value.ToString() != ""
-                       && droneList.SelectedItem.ToString() != ""
+                       
                        && count.Text != "")
-                    {
+                    { if (droneList.SelectedItem != null)
+                        {
 
-                        query = String.Format("INSERT INTO zayvki(fio, drone, count, date_of_zakaz, date_of_change, state, num) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",
-                            fio.Text.ToString(),
-                            droneList.SelectedItem.ToString(),
-                            count.Text.ToString(),
-                            thisDay.ToString("d"),
-                            thisDay.ToString("d"),
-                            "Создан",
-                            allCount.ToString());
-                        var cmd = new MySqlCommand(query, dbCon.Connection);
-                        cmd.ExecuteNonQuery();
+                            query = String.Format("INSERT INTO zayvki(fio, drone, count, date_of_zakaz, date_of_change, state, num) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",
+                                fio.Text.ToString(),
+                                droneList.SelectedItem.ToString(),
+                                count.Text.ToString(),
+                                thisDay.ToString("d"),
+                                thisDay.ToString("d"),
+                                "Создан",
+                                allCount.ToString());
+                            var cmd = new MySqlCommand(query, dbCon.Connection);
+                            cmd.ExecuteNonQuery();
 
-
+                            MessageBox.Show("Заявка отправлена.");
+                            this.Close();
+                        }
+                        else { MessageBox.Show("Ошибка добавления. Выберите дрон."); }
                     }
                     else
                     {
-                        MessageBox.Show("Ошибка добавления");
+                        MessageBox.Show("Ошибка добавления. Одно из полей не заполнено.");
                     }
 
                 }
@@ -138,9 +142,12 @@ namespace ABPa
             }
         }
 
-        private void droneList_SelectedIndexChanged(object sender, EventArgs e)
+        private void count_KeyPress(object sender, KeyPressEventArgs e)
         {
-            MessageBox.Show(droneList.SelectedIndex.ToString());
+            
+                if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+                    e.Handled = true;
+            
         }
     }
 }

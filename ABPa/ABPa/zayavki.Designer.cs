@@ -64,6 +64,7 @@
             this.count.Name = "count";
             this.count.Size = new System.Drawing.Size(306, 29);
             this.count.TabIndex = 3;
+            this.count.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.count_KeyPress);
             // 
             // label2
             // 
