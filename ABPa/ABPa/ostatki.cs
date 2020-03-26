@@ -26,8 +26,8 @@ namespace ABPa
 
         private void LoadData()
         {
-
             var dbCon = DBConn.Instance();
+            dbCon.Connection = null;
             dbCon.DatabaseName = "570_abp";
             dbCon.Host = "5.187.7.31";
             string query = "";
@@ -35,7 +35,7 @@ namespace ABPa
             {
 
 
-                query = String.Format("SELECT name,SUM(count) FROM priem WHERE `date`='{0}' GROUP BY name",dateTimePicker1.Value.ToString("d"));
+                query = String.Format("SELECT name,SUM(count) FROM priem WHERE `date`='{0}' GROUP BY name", dateTimePicker1.Value.ToString("d"));
 
                 var cmd = new MySqlCommand(query, dbCon.Connection);
                 //cmd.ExecuteNonQuery();
@@ -47,7 +47,7 @@ namespace ABPa
                 while (reader.Read())
                 {
                     data.Add(new string[3]);
-                  
+
                     data[data.Count - 1][0] = (i++).ToString();
                     data[data.Count - 1][1] = reader[0].ToString();
                     data[data.Count - 1][2] = reader[1].ToString();
@@ -61,6 +61,7 @@ namespace ABPa
                 foreach (string[] s in data)
                     dataGridViewOst.Rows.Add(s);
             }
+
         }
         private void close_Click(object sender, EventArgs e)
         {
@@ -90,7 +91,14 @@ namespace ABPa
 
         private void execButton_Click(object sender, EventArgs e)
         {
-
+            // dataGridViewOst.Rows.Clear();
+            // dataGridViewOst.Columns.Clear();
+            int rowsCount = dataGridViewOst.Rows.Count;
+            for (int i = 0; i < rowsCount; i++)
+            {
+                dataGridViewOst.Rows.Remove(dataGridViewOst.Rows[0]);
+            }
+            LoadData();
         }
     }
     
