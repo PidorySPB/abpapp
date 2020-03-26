@@ -137,5 +137,10 @@ namespace ABPa
 
             }
         }
+
+        private void droneList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(droneList.SelectedIndex.ToString());
+        }
     }
 }

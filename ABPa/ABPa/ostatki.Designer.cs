@@ -153,6 +153,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ostatki";
             this.Text = "Остатки комплектующих";
+            this.Load += new System.EventHandler(this.ostatki_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOst)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

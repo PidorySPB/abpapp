@@ -100,6 +100,11 @@ namespace ABPa
             }
             LoadData();
         }
+
+        private void ostatki_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

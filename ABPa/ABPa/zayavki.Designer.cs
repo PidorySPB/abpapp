@@ -36,7 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.sendButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
-            this.droneList = new System.Windows.Forms.ListBox();
+            this.droneList = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // zayavkaLabel
@@ -117,13 +117,11 @@
             // 
             // droneList
             // 
-            this.droneList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.droneList.FormattingEnabled = true;
-            this.droneList.ItemHeight = 24;
-            this.droneList.Location = new System.Drawing.Point(178, 133);
+            this.droneList.Location = new System.Drawing.Point(178, 204);
             this.droneList.Name = "droneList";
-            this.droneList.Size = new System.Drawing.Size(306, 28);
-            this.droneList.TabIndex = 10;
+            this.droneList.Size = new System.Drawing.Size(306, 21);
+            this.droneList.TabIndex = 11;
             // 
             // zayavki
             // 
@@ -157,6 +155,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.Button closeButton;
-        private System.Windows.Forms.ListBox droneList;
+        private System.Windows.Forms.ComboBox droneList;
     }
 }
