@@ -119,7 +119,7 @@
             // droneList
             // 
             this.droneList.FormattingEnabled = true;
-            this.droneList.Location = new System.Drawing.Point(178, 204);
+            this.droneList.Location = new System.Drawing.Point(178, 142);
             this.droneList.Name = "droneList";
             this.droneList.Size = new System.Drawing.Size(306, 21);
             this.droneList.TabIndex = 11;
