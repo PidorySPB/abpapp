@@ -28,31 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.zayavkaLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.sendButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // zayavkaLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(310, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(371, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Заявка на поставку №0000 от 26.03.2020";
+            this.zayavkaLabel.AutoSize = true;
+            this.zayavkaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.zayavkaLabel.Location = new System.Drawing.Point(233, 9);
+            this.zayavkaLabel.Name = "zayavkaLabel";
+            this.zayavkaLabel.Size = new System.Drawing.Size(371, 24);
+            this.zayavkaLabel.TabIndex = 0;
+            this.zayavkaLabel.Text = "Заявка на поставку №0000 от 26.03.2020";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(178, 98);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 29);
+            this.textBox1.Size = new System.Drawing.Size(306, 29);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
@@ -101,18 +103,39 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Количество";
             // 
+            // sendButton
+            // 
+            this.sendButton.Location = new System.Drawing.Point(18, 309);
+            this.sendButton.Name = "sendButton";
+            this.sendButton.Size = new System.Drawing.Size(96, 38);
+            this.sendButton.TabIndex = 8;
+            this.sendButton.Text = "Отправить";
+            this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(508, 309);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(96, 38);
+            this.closeButton.TabIndex = 9;
+            this.closeButton.Text = "Закрыть";
+            this.closeButton.UseVisualStyleBackColor = true;
+            // 
             // zayavki
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 359);
+            this.ClientSize = new System.Drawing.Size(613, 354);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.sendButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.zayavkaLabel);
             this.Name = "zayavki";
             this.Text = "Заявка ";
             this.Load += new System.EventHandler(this.zayavki_Load);
@@ -123,12 +146,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label zayavkaLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button sendButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }

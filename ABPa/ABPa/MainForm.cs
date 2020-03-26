@@ -47,5 +47,13 @@ namespace ABPa
         {
             this.Close();
         }
+
+        private void zayavkaButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            zayavki form = new zayavki();
+            form.ShowDialog();
+            this.Show();
+        }
     }
 }

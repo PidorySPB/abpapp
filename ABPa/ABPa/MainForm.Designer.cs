@@ -32,6 +32,7 @@
             this.loadButton = new System.Windows.Forms.Button();
             this.ostatkiButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.zayavkaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addButton
@@ -74,17 +75,28 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // zayavkaButton
+            // 
+            this.zayavkaButton.Location = new System.Drawing.Point(89, 145);
+            this.zayavkaButton.Name = "zayavkaButton";
+            this.zayavkaButton.Size = new System.Drawing.Size(197, 23);
+            this.zayavkaButton.TabIndex = 4;
+            this.zayavkaButton.Text = "Подать заявку";
+            this.zayavkaButton.UseVisualStyleBackColor = true;
+            this.zayavkaButton.Click += new System.EventHandler(this.zayavkaButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 194);
+            this.Controls.Add(this.zayavkaButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.ostatkiButton);
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.addButton);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Главное меню";
             this.ResumeLayout(false);
 
         }
@@ -95,5 +107,6 @@
         private System.Windows.Forms.Button loadButton;
         private System.Windows.Forms.Button ostatkiButton;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button zayavkaButton;
     }
 }
