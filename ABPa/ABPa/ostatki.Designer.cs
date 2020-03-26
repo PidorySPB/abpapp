@@ -105,6 +105,7 @@
             this.execButton.TabIndex = 4;
             this.execButton.Text = "Выполнить";
             this.execButton.UseVisualStyleBackColor = true;
+            this.execButton.Click += new System.EventHandler(this.execButton_Click);
             // 
             // closeButton
             // 

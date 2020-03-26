@@ -35,29 +35,26 @@ namespace ABPa
             {
 
 
-                query = String.Format("SELECT name, SUM(count) FROM `priem` Where date = '26.03.2020' GROUP BY name");
+                query = String.Format("SELECT name,SUM(count) FROM priem WHERE `date`='{0}' GROUP BY name",dateTimePicker1.Value.ToString("d"));
 
                 var cmd = new MySqlCommand(query, dbCon.Connection);
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
 
-
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-
+                // SqlConnection dataBaseConnection = new SqlConnection(conn);
+                var reader = cmd.ExecuteReader();
                 List<string[]> data = new List<string[]>();
-
+                int i = 1;
                 while (reader.Read())
                 {
                     data.Add(new string[3]);
-
-
-                    data[data.Count - 1][1] = reader[1].ToString();
-                    data[data.Count - 1][2] = reader[2].ToString();
+                  
+                    data[data.Count - 1][0] = (i++).ToString();
+                    data[data.Count - 1][1] = reader[0].ToString();
+                    data[data.Count - 1][2] = reader[1].ToString();
                 }
 
+
                 reader.Close();
-
-
                 dbCon.Close();
                 GC.Collect();
                 GC.WaitForPendingFinalizers();
@@ -89,6 +86,11 @@ namespace ABPa
                 }
             }
             ExcelApp.Visible = true;
+        }
+
+        private void execButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

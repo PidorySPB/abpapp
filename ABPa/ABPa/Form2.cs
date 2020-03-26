@@ -125,6 +125,7 @@ namespace ABPa {
                 currencell = 1;
                 TextBox b = (TextBox)e.Control;
                 b.KeyPress += new KeyPressEventHandler(b_KeyPress);
+                MessageBox.Show(b.Text);
                 //b = null;
             }
             else
