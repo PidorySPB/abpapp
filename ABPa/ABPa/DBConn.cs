@@ -31,6 +31,7 @@ namespace ABPa
         private MySqlConnection connection = null;
         public MySqlConnection Connection
         {
+            set { connection = value; }
             get { return connection; }
         }
 
