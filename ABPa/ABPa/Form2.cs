@@ -127,7 +127,7 @@ namespace ABPa {
             {
                 TextBox b = (TextBox)e.Control;
                 b.KeyPress += new KeyPressEventHandler(b_KeyPress);
-            } 
+            }
         }
             void b_KeyPress(object senderr, KeyPressEventArgs ee)
             {
@@ -136,6 +136,16 @@ namespace ABPa {
                         ee.Handled = true;
                 }
             }
-        
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                MessageBox.Show(dataGridView1.Rows[0].Cells[0].Value.ToString());
+            }catch(Exception ee)
+            {
+
+            }
+        }
     }
 }
