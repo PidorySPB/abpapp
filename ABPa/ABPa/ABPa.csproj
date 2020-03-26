@@ -77,6 +77,12 @@
     <Compile Include="ostatki.Designer.cs">
       <DependentUpon>ostatki.cs</DependentUpon>
     </Compile>
+    <Compile Include="PosmotrZv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PosmotrZv.Designer.cs">
+      <DependentUpon>PosmotrZv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="zayavki.cs">
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ostatki.resx">
       <DependentUpon>ostatki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosmotrZv.resx">
+      <DependentUpon>PosmotrZv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

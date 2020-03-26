@@ -55,5 +55,11 @@ namespace ABPa
             form.ShowDialog();
             this.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            PosmotrZv form = new PosmotrZv();
+            form.ShowDialog();
+        }
     }
 }

@@ -33,6 +33,7 @@
             this.ostatkiButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.zayavkaButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addButton
@@ -67,7 +68,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(307, 159);
+            this.closeButton.Location = new System.Drawing.Point(307, 200);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 3;
@@ -85,11 +86,22 @@
             this.zayavkaButton.UseVisualStyleBackColor = true;
             this.zayavkaButton.Click += new System.EventHandler(this.zayavkaButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(89, 183);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(197, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Просмотр заявок";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 194);
+            this.ClientSize = new System.Drawing.Size(394, 235);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.zayavkaButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.ostatkiButton);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Button ostatkiButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button zayavkaButton;
+        private System.Windows.Forms.Button button1;
     }
 }
